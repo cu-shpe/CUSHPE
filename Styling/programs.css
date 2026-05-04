@@ -61,7 +61,6 @@ section { padding: 6rem 4rem; }
 }
 .page-hero-content { position: relative; z-index: 1; max-width: 720px; }
 
-/* Reuse hero-eyebrow styles from index */
 .hero-eyebrow {
   display: inline-flex; align-items: center; gap: 0.6rem;
   background: rgba(155,221,255,0.08); border: 1px solid rgba(155,221,255,0.2);
