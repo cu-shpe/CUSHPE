@@ -1,0 +1,328 @@
+/* ================================
+   GALLERY PAGE — gallery.css
+   Save to: Styling/gallery.css
+   ================================ */
+
+:root {
+  --columbia-blue: #9BDDFF;
+  --columbia-dark: #003087;
+  --navy: #0A1628;
+  --gold: #C4973A;
+  --cream: #F8F4EE;
+  --red-accent: #C8102E;
+  --text: #1a1a2e;
+  --muted: #6B7280;
+  --white: #ffffff;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--navy);
+  color: var(--white);
+  overflow-x: hidden;
+}
+
+/* HERO */
+.gallery-hero {
+  min-height: 52vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 8rem 2rem 0rem;
+  text-align: center;
+}
+
+.gallery-hero-bg {
+  position: absolute; inset: 0; z-index: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0,48,135,0.65) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 30% at 85% 85%, rgba(155,221,255,0.06) 0%, transparent 60%),
+    linear-gradient(180deg, #0A1628 0%, #060e1c 100%);
+}
+
+.gallery-hero-grid {
+  position: absolute; inset: 0; z-index: 0;
+  background-image:
+    linear-gradient(rgba(155,221,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(155,221,255,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.gallery-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(155,221,255,0.08);
+  border: 1px solid rgba(155,221,255,0.2);
+  padding: 0.4rem 1rem;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--columbia-blue);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  animation: fadeUp 0.8s ease both;
+}
+
+.hero-eyebrow span {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--columbia-blue);
+}
+
+.gallery-hero-title {
+  font-family: 'Georgia', serif;
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  color: var(--white);
+  margin-bottom: 1.2rem;
+  animation: fadeUp 0.8s 0.1s ease both;
+}
+
+.gallery-hero-title em {
+  font-style: italic;
+  color: var(--columbia-blue);
+}
+
+.gallery-hero-sub {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.55);
+  font-weight: 300;
+  line-height: 1.75;
+  animation: fadeUp 0.8s 0.2s ease both;
+}
+
+/* GALLERY SECTION
+    */
+.gallery-section {
+  background: #060e1c;
+  padding: 5rem 4rem 7rem;
+}
+
+.gallery-grid-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+/* PHOTO CARDS */
+.photo-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: visible; /* allow scale to bleed outside */
+  cursor: pointer;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(155,221,255,0.1);
+
+  /* Scroll fade-in: start invisible */
+  opacity: 0;
+  transform: translateY(36px);
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s ease,
+    border-color 0.25s ease,
+    box-shadow 0.35s ease;
+
+  /* Uniform fixed aspect ratio — all cards identical height */
+  aspect-ratio: 4 / 3;
+}
+
+/* Clip the image normally but let the card itself scale on hover */
+.photo-card .photo-inner {
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* After JS adds .visible, card fades in */
+.photo-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.photo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+/* HOVER OVERLAY WITH DESCRIPTION */
+.photo-overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  background: linear-gradient(
+    to top,
+    rgba(6, 14, 28, 0.96) 0%,
+    rgba(0, 48, 135, 0.65) 50%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.75rem 1.5rem;
+
+  opacity: 0;
+  transform: translateY(6px);
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+
+/* Scale the inner container (image + overlay) on hover — shows "full image bigger" */
+.photo-card:hover .photo-inner {
+  transform: scale(1.07);
+}
+
+.photo-card:hover .photo-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.photo-card:hover {
+  border-color: rgba(155,221,255,0.4);
+  box-shadow:
+    0 0 0 1px rgba(155,221,255,0.2),
+    0 20px 60px rgba(0,0,0,0.5);
+  z-index: 2;
+}
+
+.photo-tag {
+  display: inline-block;
+  background: rgba(155,221,255,0.15);
+  border: 1px solid rgba(155,221,255,0.3);
+  color: var(--columbia-blue);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.65rem;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+  width: fit-content;
+}
+
+.photo-desc {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.82);
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* SECTION / SHARED UTILITIES */
+.section-eyebrow {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--columbia-blue);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+/* CTA BANNER */
+.cta-banner {
+  background: linear-gradient(135deg, var(--columbia-dark) 0%, #0a1e4d 100%);
+  border-top: 1px solid rgba(155,221,255,0.2);
+  border-bottom: 1px solid rgba(155,221,255,0.2);
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.cta-banner h2 {
+  font-family: 'Georgia', serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  margin-bottom: 1rem;
+}
+
+.cta-banner p {
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 2rem;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: var(--columbia-blue);
+  color: var(--navy);
+  padding: 0.85rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: #fff;
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--white);
+  padding: 0.85rem 2rem;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.2s;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.btn-outline:hover {
+  border-color: var(--columbia-blue);
+  color: var(--columbia-blue);
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .gallery-grid-inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  nav { padding: 1rem 1.5rem; }
+  .nav-links { display: none; }
+
+  .gallery-section {
+    padding: 4rem 1.25rem 5rem;
+  }
+
+  .gallery-grid-inner {
+    grid-template-columns: 1fr;
+  }
+}

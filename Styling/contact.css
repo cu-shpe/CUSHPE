@@ -1,0 +1,328 @@
+:root {
+  --columbia-blue: #9BDDFF;
+  --columbia-dark: #003087;
+  --navy: #0A1628;
+  --white: #ffffff;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--navy);
+  color: var(--white);
+  overflow-x: hidden;
+}
+
+/* ─── HERO ─────────────────────────────────── */
+.hero {
+  padding: 8rem 2rem 3rem;
+  text-align: center;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0,48,135,0.55) 0%, transparent 70%),
+    linear-gradient(180deg, #0A1628 0%, #060e1c 100%);
+}
+.hero-title {
+  font-family: 'Georgia', serif;
+  font-size: 3rem;
+  font-weight: 900;
+}
+.hero-sub {
+  margin-top: 1rem;
+  color: rgba(255,255,255,0.6);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* ─── AUTO SLIDESHOW ────────────────────────── */
+.slideshow-section {
+  width: 100%;
+  overflow: hidden;
+  background: #060e1c;
+  border-top: 1px solid rgba(155,221,255,0.08);
+  border-bottom: 1px solid rgba(155,221,255,0.08);
+  /* Fade out left & right edges */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+}
+
+.slideshow-track {
+  display: flex;
+  gap: 1.25rem;
+  padding: 1.5rem 0;
+  width: max-content;
+  animation: slideLoop 32s linear infinite;
+}
+
+.slideshow-track:hover {
+  animation-play-state: paused;
+}
+
+.slideshow-track img {
+  width: 320px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid rgba(155,221,255,0.1);
+  flex-shrink: 0;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.slideshow-track img:hover {
+  transform: scale(1.03);
+  border-color: rgba(155,221,255,0.35);
+}
+
+@keyframes slideLoop {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+  /* -50% moves exactly the first (original) set out of view,
+     at which point the duplicate set fills in — creating a seamless loop */
+}
+
+/*  SIDE-BY-SIDE CARDS  */
+.cards-section {
+  background: var(--navy);
+  padding: 5rem 4rem;
+}
+
+.cards-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.info-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(155,221,255,0.1);
+  border-radius: 20px;
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: border-color 0.25s, transform 0.25s;
+}
+
+.info-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--columbia-blue), transparent);
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+.info-card:hover { border-color: rgba(155,221,255,0.3); transform: translateY(-4px); }
+.info-card:hover::before { opacity: 1; }
+
+/* Accent variant — slightly blue-tinted background for the PDF card */
+.info-card--accent {
+  background: rgba(0,48,135,0.15);
+  border-color: rgba(155,221,255,0.18);
+}
+
+.card-eyebrow {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--columbia-blue);
+  background: rgba(155,221,255,0.08);
+  border-radius: 4px;
+  padding: 0.25rem 0.6rem;
+  display: inline-block;
+  width: fit-content;
+}
+
+.card-title {
+  font-family: 'Georgia', serif;
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 0.25rem;
+}
+
+.card-body {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.7;
+  flex: 1;
+}
+
+/* Social links inside card */
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border: 1px solid rgba(155,221,255,0.12);
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  color: rgba(255,255,255,0.75);
+  font-size: 0.85rem;
+  font-weight: 500;
+  background: rgba(255,255,255,0.02);
+  transition: all 0.2s;
+}
+.social-links a:hover {
+  color: var(--white);
+  border-color: rgba(155,221,255,0.35);
+  background: rgba(155,221,255,0.06);
+  transform: translateX(3px);
+}
+
+/* Colored dot per platform */
+.social-dot {
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.social-dot.ig { background: #e1306c; }
+.social-dot.li { background: #0a66c2; }
+.social-dot.lt { background: #39d178; }
+
+/* PDF button inside card */
+.pdf-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: 8px;
+  background: var(--columbia-blue);
+  color: var(--navy);
+  font-weight: 600;
+  font-size: 0.88rem;
+  text-decoration: none;
+  transition: all 0.2s;
+  width: fit-content;
+}
+.pdf-link:hover {
+  background: #fff;
+  transform: translateY(-1px);
+}
+
+/* GOOGLE FORM STYLING */
+.contact-section {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 2rem 2rem 5rem;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.form-header h2 {
+  font-family: 'Georgia', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+.form-header p {
+  color: rgba(255,255,255,0.55);
+  font-size: 0.9rem;
+}
+.form-header a {
+  color: var(--columbia-blue);
+  text-decoration: none;
+  font-weight: 500;
+}
+.form-header a:hover { text-decoration: underline; }
+
+.form-embed-wrapper {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(155,221,255,0.15);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.google-form-embed {
+  width: 100%;
+  height: 620px;
+  display: block;
+  border: none;
+}
+
+.form-fallback {
+  text-align: center;
+  margin-top: 1.25rem;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.3);
+}
+.form-fallback a {
+  color: var(--columbia-blue);
+  text-decoration: none;
+  font-weight: 500;
+}
+.form-fallback a:hover { text-decoration: underline; }
+
+/*  SPONSORS  */
+.sponsors {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: #060e1c;
+  border-top: 1px solid rgba(155,221,255,0.08);
+}
+.sponsors h2 {
+  font-family: 'Georgia', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.sponsor-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.sponsor {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(155,221,255,0.1);
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.6);
+  transition: border-color 0.2s;
+}
+.sponsor:hover { border-color: rgba(155,221,255,0.3); }
+.sponsor img {
+  max-width: 120px;
+  display: block;
+  margin: 0 auto 0.5rem;
+}
+
+/*  RESPONSIVE  */
+@media (max-width: 768px) {
+  nav { padding: 1rem 1.5rem; }
+  .nav-links { display: none; }
+  .cards-section { padding: 3rem 1.5rem; }
+  .cards-inner { grid-template-columns: 1fr; }
+  .slideshow-track img { width: 240px; height: 170px; }
+  .google-form-embed { height: 700px; }
+  .contact-section { padding: 1.5rem 1rem 3rem; }
+}

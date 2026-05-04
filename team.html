@@ -1,0 +1,246 @@
+<!-- TEAM.HTML -- Executive Board + OCMs -->
+<!-- As a reminder, make sure to comment sections and minimize commented out sections to avoid clutter & mess. -->
+
+ <!-- This section is on every html file. It connects different files together and sets up the structure. Ensure the css files correspond to this html file. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Executive Board | SHPE Columbia</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="Styling/team.css">
+  <link rel="stylesheet" href="Styling/navigation.css">
+  <link rel="stylesheet" href="Styling/footer.css">
+
+</head>
+
+<body>
+
+<!-- This section is for the NAVIGATION BAR. As of now (5/3/26), you will need to make changes to EVERY file to update something on the navigation bar. -->
+<nav>
+  <a href="index.html" class="nav-logo">
+     <img src="Logos/WhiteandColor.png" class="nav-logo-icon"/>
+  </a>
+
+  <!-- Hamburger (Shown when the screen shrinks) -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- If you want to add a new tab, edit this and make sure to create the new .html file for it to head to. -->
+  <ul class="nav-links" id="navLinks">
+    <li><a href="events.html">Events</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="programs.html">Programs</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="sponsorship.html">Sponsor</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+  </ul>
+</nav>
+
+<!-- This section is the HERO section. It is basically what you see the top of this page. -->
+<section class="page-hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="page-hero-content">
+    <div class="hero-eyebrow"><span></span> 🦁 MEET THE TEAM</div>
+    <h1 class="hero-title">Executive Board &amp; <em>Operational Committee Members</em></h1>
+    <p class="hero-sub">Meet the group of students working diligently to expand access to resources for engineers in the Columbia community and students in New York.</p>
+  </div>
+</section>
+
+<!-- This is the EBOARD section. Update using images in the ExecutiveBoard folder. Delete images not using in folder to avoid clutter. Feel free to add emails of eboard members to the cards later. -->
+<section class="team-section">
+  <div class="team-grid">
+
+    <!-- MEMBER CARDS LIKE THS NEED TO BE DUPLICATED FOR MORE CARDS -->
+    <div class="member-card">
+      <img src="ExecutiveBoard/Xochitl_Morales.png" class="member-img"/>
+      <div class="member-body">
+        <div class="member-name">Xochitl Morales</div>
+        <div class="member-meta">Biomedical Engineering · SEAS'26</div>
+        <div class="member-role">President</div>
+        <div class="member-desc">
+          Leads the organization’s vision, oversees all initiatives, and represents SHPE Columbia at the university and national level.
+        </div>
+
+      </div>
+    </div>
+
+ 
+    <div class="member-card">
+      <img src="ExecutiveBoard/Karen_Garcia.png" class="member-img"/>
+      <div class="member-body">
+        <div class="member-name">Karen Garcia</div>
+        <div class="member-meta">Chemical Engineering · SEAS'27</div>
+        <div class="member-role">Vice President Internal</div>
+        <div class="member-desc">
+          Coordinating internal operations and fostering a strong sense of community among SHPE members through engaging activities.
+        </div>
+      </div>
+    </div>
+
+    <div class="member-card">
+      <img src="ExecutiveBoard/Daniela_Velazquez.png" class="member-img"/>
+      <div class="member-body">
+        <div class="member-name">Daniela Velazquez</div>
+        <div class="member-meta">Computer Science · CC'26</div>
+        <div class="member-role">Vice President External </div>
+        <div class="member-desc">
+          Managing external relationships and representing SHPE at university and national events to expand our network and impact. 
+        </div>
+      </div>
+    </div>
+
+     <div class="member-card">
+      <img src="ExecutiveBoard/Lizette_Hernandez.png" class="member-img"/>
+      <div class="member-body">
+        <div class="member-name">Lizette Hernandez</div>
+        <div class="member-meta">Computer Science · SEAS'26</div>
+        <div class="member-role">Events Coordinator</div>
+        <div class="member-desc">
+          Organizing events and maintaining strong communication across the organization to ensure seamless operations and member engagement. 
+        </div>
+      </div>
+    </div>
+
+    <div class="member-card">
+      <img src="ExecutiveBoard/Natalie_Gonzalez.png" class="member-img"/>
+      <div class="member-body">
+        <div class="member-name">Natalie Gonzalez</div>
+        <div class="member-meta">Computer Science · SEAS'27</div>
+        <div class="member-role">Public Relations Chair</div>
+        <div class="member-desc">
+          Designing and executing outreach strategies that promote chapter events and initiatives through social media, marketing materials, and campus engagement. 
+        </div>
+      </div>
+    </div>
+
+    <div class="member-card">
+      <img src="ExecutiveBoard/Damaris_MaganaAlday.png" class="member-img"/>
+      <div class="member-body">
+        <div class="member-name">Damaris Magana Alday</div>
+        <div class="member-meta">Economics & Computer Science · CC'27</div>
+        <div class="member-role">Treasurer</div>
+        <div class="member-desc">
+          Managing financial operations and ensuring responsible allocation of resources to support chapter activities and member benefits. 
+        </div>
+      </div>
+    </div>
+
+     <div class="member-card">
+      <img src="ExecutiveBoard/Miriam_CristinaTrujillo.png" class="member-img"/>
+      <div class="member-body">
+        <div class="member-name">Miriam Cristina Trujillo</div>
+        <div class="member-meta">Electrical Engineering · SEAS'27</div>
+        <div class="member-role"> Secretary and Tech Chair</div>
+        <div class="member-desc">
+          Managing chapter documentation and communications by recording meeting minutes, maintaining records, and ensuring members stay informed on chapter activities and deadlines. 
+        </div>
+      </div>
+    </div>
+
+    <div class="member-card">
+      <img src="ExecutiveBoard/Joshua_Mendoza.png" class="member-img"/>
+      <div class="member-body">
+        <div class="member-name">Joshua Mendoza</div>
+        <div class="member-meta">Electrical Engineering · SEAS'29</div>
+        <div class="member-role"> First-Year Representative</div>
+        <div class="member-desc">
+          Serving as the primary liaison between the freshman class and the Executive Board, serving to boost engagement and communicate needs. 
+        </div>
+      </div>
+    </div>
+
+    <div class="member-card">
+      <img src="ExecutiveBoard/Neslian.png" class="member-img"/>
+      <div class="member-body">
+        <div class="member-name">Neslian Marie Sabater</div>
+        <div class="member-meta">Chemical Engineering · SEAS'27</div>
+        <div class="member-role"> SHPEtinas Chair</div>
+        <div class="member-desc">
+          Serving as the primary liaison between SHPEtinas and the Executive Board, working to foster community, amplify member voices, and advocate for the needs and professional growth of members. 
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- This is the OCMs section. Update using images you download into the OCM folder. Delete images not using in folder to avoid clutter. Feel free to add emails of members to the cards later. -->     
+
+<h1 class="hero-title" style="text-align: center; margin: 1rem 0; padding: 0.5rem 0;">
+  Committee Members (OCMs)
+</h1>
+
+<section class="team-section">
+  <div class="team-grid">
+
+    <div class="member-card">
+      <img src="" class="member-img"/>
+      <div class="member-body">
+        <div class="member-name">OCMs Coming Soon!</div>
+        <div class="member-meta">Major · Year</div>
+        <div class="member-role"> Committee </div>
+        <div class="member-desc">
+          Supports E-board in operating club initiatives.
+        </div>
+      </div>
+    </div>
+
+    </div>
+</section>
+
+<!-- This section is for the FOOTER. As of now (5/3/26), you will need to make changes to EVERY file with the footer to update something on the footer. -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="nav-logo">
+        <img src="Logos/WhiteandColor.png" class="nav-logo-icon"/>
+      </div>
+      <p>Empowering Hispanic students in STEM through professional development, networking, and community service — in the heart of New York City.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Navigate</h5>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="sponsorship.html">Sponsor</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Programs</h5>
+      <ul>
+        <li><a href="programs.html">SHPEtinas</a></li>
+        <li><a href="programs.html">Dia De Ciencias</a></li>
+        <li><a href="programs.html">National Convention</a></li>
+        <li><a href="programs.html">Cafe Con Leche</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Resources</h5>
+      <ul>
+        <li><a href="https://www.shpe.org" target="_blank">National SHPE</a></li>
+        <li><a href="https://engineering.columbia.edu" target="_blank">Columbia SEAS</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 SHPE Columbia University. All rights reserved.</p>
+    <p style="color:rgba(155,221,255,0.3);font-size:0.72rem;">New York City, NY</p>
+  </div>
+</footer>
+
+<script src="Scripts/navigation.js"></script>
+
+</body>
+</html>

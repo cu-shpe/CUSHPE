@@ -1,0 +1,180 @@
+<!-- CONTACT.HTML -- Contact us form -->
+<!-- As a reminder, make sure to comment sections and minimize commented out sections to avoid clutter & mess. -->
+
+ <!-- This section is on every html file. It connects different files together and sets up the structure. Ensure the css files correspond to this html file. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | SHPE Columbia</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="Styling/contact.css">
+  <link rel="stylesheet" href="Styling/navigation.css">
+  <link rel="stylesheet" href="Styling/footer.css">
+</head>
+
+<body>
+
+<!-- This section is for the NAVIGATION BAR. As of now (5/3/26), you will need to make changes to EVERY file to update something on the navigation bar. -->
+<nav>
+  <a href="index.html" class="nav-logo">
+     <img src="Logos/WhiteandColor.png" class="nav-logo-icon"/>
+  </a>
+
+  <!-- Hamburger (Shown when the screen shrinks) -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- If you want to add a new tab, edit this and make sure to create the new .html file for it to head to. -->
+  <ul class="nav-links" id="navLinks">
+    <li><a href="events.html">Events</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="programs.html">Programs</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="sponsorship.html">Sponsor</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+  </ul>
+</nav>
+
+<!-- This section is the HERO section. It is basically what you see the top of every html page. -->
+<section class="hero">
+  <h1 class="hero-title">Let's Make an Impact Together</h1>
+  <p class="hero-sub">Questions, partnerships, or just want to connect? Reach out.</p>
+</section>
+
+<!-- This section is for the SLIDESHOW. It automatically scrolls right now. -->
+<section class="slideshow-section">
+  <div class="slideshow-track" id="slideshowTrack">
+    <!--
+      Add images you want to 
+    -->
+    <img src="ContactUsImages/Image1.png" alt="SHPE community" />
+    <img src="ContactUsImages/Image2.png"  alt="SHPE community" />
+    <img src="ContactUsImages/Image3.png"  alt="SHPE community" />
+    <img src="ContactUsImages/Image4.png"  alt="SHPE community" />
+    <img src="ContactUsImages/Image5.png"  alt="SHPE community" />
+    <img src="ContactUsImages/Image6.png"  alt="SHPE community" />
+    <!-- Duplicate set for loop -->
+    <img src="ContactUsImages/Image1.png" alt="SHPE community" />
+    <img src="ContactUsImages/Image2.png"  alt="SHPE community" />
+    <img src="ContactUsImages/Image3.png"  alt="SHPE community" />
+    <img src="ContactUsImages/Image4.png"  alt="SHPE community" />
+    <img src="ContactUsImages/Image5.png"  alt="SHPE community" />
+    <img src="ContactUsImages/Image6.png"  alt="SHPE community" />
+  </div>
+</section>
+
+<!-- This section is for the SOCIALS and CORPORATE PACKAGE. -->
+<section class="cards-section">
+  <div class="cards-inner">
+
+    <!-- Connect With Us -->
+    <div class="info-card">
+      <div class="card-eyebrow">Follow Along</div>
+      <h2 class="card-title">Connect With Us</h2>
+      <p class="card-body">Stay up to date with events, announcements, and community highlights across our social channels.</p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/columbia_shpe/" target="_blank">
+          <span class="social-dot ig"></span> Instagram
+        </a>
+        <a href="https://www.linkedin.com/company/society-of-hispanic-professional-engineers-columbia-university-chapter/posts/?feedView=all" target="_blank">
+          <span class="social-dot li"></span> LinkedIn
+        </a>
+        <a href="https://linktr.ee/columbiashpe" target="_blank">
+          <span class="social-dot lt"></span> Linktree
+        </a>
+      </div>
+    </div>
+
+    <!-- Corporate Package -->
+    <div class="info-card info-card--accent">
+      <div class="card-eyebrow">Partner With Us</div>
+      <h2 class="card-title">Sponsorship Package</h2>
+      <p class="card-body">Interested in supporting SHPE Columbia? Download our corporate package to learn about partnership tiers, benefits, and how to get involved.</p>
+      <a href="Documents/2025-2026-Sponsorship.pdf" class="pdf-link" target="_blank">
+        📄 View Corporate Package
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- This is for the GOOGLE FORM. Ownership will need to be transferred. Consider using an external software to make our own Contact Form on site! -->
+<section class="contact-section">
+  <div class="form-header">
+    <h2>Send Us a Message</h2>
+    <p>Fill out the form below or email us directly at
+      <a href="mailto:shpe@columbia.edu">shpe@columbia.edu</a>
+    </p>
+  </div>
+
+  <div class="form-embed-wrapper">
+    <iframe
+      src="https://docs.google.com/forms/d/e/1FAIpQLScVILcCZmbuZE12yxASusnEpkU-gytqft62sBJ-Y45WuFKWkA/viewform?embedded=true" 
+      class="google-form-embed"
+      frameborder="0"
+      marginheight="0"
+      marginwidth="0"
+      title="SHPE Columbia Contact Form"
+    >
+      Loading…
+    </iframe>
+  </div>
+
+  <p class="form-fallback">
+    Having trouble? <a href="mailto:shpe@columbia.edu">Email us directly →</a>
+  </p>
+</section>
+
+<!-- This section is for the FOOTER. As of now (5/3/26), you will need to make changes to EVERY file with the footer to update something on the footer. -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="nav-logo">
+        <img src="Logos/WhiteandColor.png" class="nav-logo-icon"/>
+      </div>
+      <p>Empowering Hispanic students in STEM through professional development, networking, and community service — in the heart of New York City.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Navigate</h5>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="sponsorship.html">Sponsor</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Programs</h5>
+      <ul>
+        <li><a href="programs.html">SHPEtinas</a></li>
+        <li><a href="programs.html">Dia De Ciencias</a></li>
+        <li><a href="programs.html">National Convention</a></li>
+        <li><a href="programs.html">Cafe Con Leche</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Resources</h5>
+      <ul>
+        <li><a href="https://www.shpe.org" target="_blank">National SHPE</a></li>
+        <li><a href="https://engineering.columbia.edu" target="_blank">Columbia SEAS</a></li>
+        <li><a href="contact.html">Sponsorship</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 SHPE Columbia University. All rights reserved.</p>
+    <p style="color:rgba(155,221,255,0.3);font-size:0.72rem;">New York City, NY</p>
+  </div>
+</footer>
+
+<script src="Scripts/navigation.js"></script>
+
+</body>
+</html>

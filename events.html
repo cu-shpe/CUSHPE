@@ -1,0 +1,204 @@
+<!-- EVENTS.HTML -- PAGE WITH INFO OF EVENTS -->
+<!-- As a reminder, make sure to comment sections and minimize commented out sections to avoid clutter & mess. -->
+
+ <!-- This section is on every html file. It connects different files together and sets up the structure. Ensure the css files correspond to this html file.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Events – SHPE Columbia University</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="Styling/events.css">
+  <link rel="stylesheet" href="Styling/navigation.css">
+  <link rel="stylesheet" href="Styling/footer.css">
+</head>
+<body>
+
+<!-- This section is for the NAVIGATION BAR. As of now (5/3/26), you will need to make changes to EVERY file to update something on the navigation bar. -->
+<nav>
+  <a href="index.html" class="nav-logo">
+     <img src="Logos/WhiteandColor.png" class="nav-logo-icon"/>
+  </a>
+
+  <!-- Hamburger (Shown when the screen shrinks) -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- If you want to add a new tab, edit this and make sure to create the new .html file for it to head to. -->
+  <ul class="nav-links" id="navLinks">
+    <li><a href="events.html">Events</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="programs.html">Programs</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="sponsorship.html">Sponsor</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+  </ul>
+</nav>
+
+<!-- This section is the HEADER section. It is basically what you see the top of this page. -->
+<div class="page-header">
+  <div class="eyebrow">Calendar & Events</div>
+  <h1 class="page-title">Events & <em>Gatherings</em></h1>
+  <p class="page-sub">From professional development workshops to social celebrations — stay connected with your SHPE familia at Columbia.</p>
+</div>
+
+<!--
+/Feature Event Section. You can use this to countdown for National Convention or something
+<div class="featured-event">
+  <div class="featured-inner">
+    <div class="featured-label">Featured Event</div>
+    <div class="featured-card">
+      <div class="featured-visual">
+        🌟
+        <div class="featured-badge">Flagship · 2026</div>
+      </div>
+      <div class="featured-content">
+        <div class="event-type-tag">National Convention</div>
+        <h2 class="featured-title">National SHPE Convention</h2>
+        <p class="featured-desc">Join us for several days of networking, workshops, and fun.</p>
+        <div class="countdown" id="countdown">
+          <div class="count-box"><div class="count-num" id="cd-days">--</div><div class="count-label">Days</div></div>
+          <div class="count-box"><div class="count-num" id="cd-hrs">--</div><div class="count-label">Hrs</div></div>
+          <div class="count-box"><div class="count-num" id="cd-min">--</div><div class="count-label">Min</div></div>
+          <div class="count-box"><div class="count-num" id="cd-sec">--</div><div class="count-label">Sec</div></div>
+        </div>
+        <div class="event-meta-row">
+          <div class="meta-item"><span>📅</span><span> [Month][Day] 2026 · [TIME]] PM</span></div>
+          <div class="meta-item"><span>📍</span><span> wherever </span></div>
+          <div class="meta-item"><span>🎟️</span><span> General Admission $$$[price]</span></div>
+        </div>
+        <a href="contact.html" class="btn-primary">Register Now</a>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+
+<!-- This section is the UPCOMING EVENTS section. As of now (5/3/26), this needs to be updated manually. Ideally, this will be changed to automatic if connected to one of our calendars once established. -->
+<div class="events-section">
+  <div class="events-section-inner">
+    <div class="section-header">
+      <h2 class="section-heading">Upcoming Events — Fall 2026</h2>
+    </div>
+    <div class="events-grid">
+
+      <div class="event-card">
+        <div class="event-img">🤝
+          <div class="event-date-badge"><div class="badge-month">Sep</div><div class="badge-day">TBD</div></div>
+        </div>
+        <div class="event-body">
+          <div class="ev-type">Social</div>
+          <div class="ev-name">First General Body Meeting</div>
+          <div class="ev-meta">📍 TBD ·Time TBD</div>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <div class="event-img">📄
+          <div class="event-date-badge"><div class="badge-month">Sep</div><div class="badge-day">TBD</div></div>
+        </div>
+        <div class="event-body">
+          <div class="ev-type">TBD</div>
+          <div class="ev-name">Coming Soon.....</div>
+          <div class="ev-meta">📍</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- This section is the INSTAGRAM WIDGET section. As of now (5/3/26), this widget is under Daniela. This should be changed. Consider changing the platform as well. -->
+<div class="instagram-section">
+  <div class="instagram-inner">
+    <div class="section-header">
+      <h2 class="section-heading">Follow Us on Instagram 📸</h2>
+      <p class="section-sub">
+        <a href="https://www.instagram.com/columbia_shpe/" target="_blank">@columbia_shpe</a>
+      </p>
+    </div>
+    <div class="instagram-embed-wrapper">
+      <!-- Elfsight Instagram Feed | ColumbiaSHPE -->
+        <script src="https://elfsightcdn.com/platform.js" async></script>
+        <div class="elfsight-app-4289514f-5c99-4eb2-a9fa-e28ac221b31d" data-elfsight-app-lazy></div>
+    </div>
+  </div>
+</div>
+
+<!-- This section is the RECENT EVENTS section. As of now (5/3/26), this needs to be updated manually. -->
+<div class="past-events">
+  <div class="past-inner">
+    <div class="section-heading">Recent Events</div>
+    <div class="past-grid">
+      <div class="past-card"><div class="past-icon"></div><div class="past-name">Paint & Sip With Chicanx Caucus</div><div class="past-date">Apr 2026</div></div>
+      <div class="past-card"><div class="past-icon"></div><div class="past-name">Freestone Grove Company Visit with Columbia Alpha Partners</div><div class="past-date">Nov 2024</div></div>
+      <div class="past-card"><div class="past-icon"></div><div class="past-name">Dia De Ciencias</div><div class="past-date">Apr 2026</div></div>
+      <div class="past-card"><div class="past-icon"></div><div class="past-name">Future-proofing Your Tech Career With Colorstack</div><div class="past-date">April 2026</div></div>
+      <div class="past-card"><div class="past-icon"></div><div class="past-name">Cafe Con Leche with LPEN</div><div class="past-date">April 2026</div></div>
+      <div class="past-card"><div class="past-icon"></div><div class="past-name">Financial Literacy Event with Bank of America</div><div class="past-date">March 2026</div></div>
+      <div class="past-card"><div class="past-icon"></div><div class="past-name">Columbia SHPE x NYU SHPE Mixer</div><div class="past-date">March 2026</div></div>
+      <div class="past-card"><div class="past-icon"></div><div class="past-name">SHPEtinas Professional Panel</div><div class="past-date">March 2026</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- This section is for the FOOTER. As of now (5/3/26), you will need to make changes to EVERY file with the footer to update something on the footer. -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="nav-logo">
+        <img src="Logos/WhiteandColor.png" class="nav-logo-icon"/>
+      </div>
+      <p>Empowering Hispanic students in STEM through professional development, networking, and community service — in the heart of New York City.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Navigate</h5>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="sponsorship.html">Sponsor</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Programs</h5>
+      <ul>
+        <li><a href="programs.html">SHPEtinas</a></li>
+        <li><a href="programs.html">Dia De Ciencias</a></li>
+        <li><a href="programs.html">National Convention</a></li>
+        <li><a href="programs.html">Cafe Con Leche</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Resources</h5>
+      <ul>
+        <li><a href="https://www.shpe.org" target="_blank">National SHPE</a></li>
+        <li><a href="https://engineering.columbia.edu" target="_blank">Columbia SEAS</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 SHPE Columbia University. All rights reserved.</p>
+    <p style="color:rgba(155,221,255,0.3);font-size:0.72rem;">New York City, NY</p>
+  </div>
+</footer>
+
+<script>
+
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+</script>
+
+<script src="Scripts/navigation.js"></script>
+</body>
+</html>

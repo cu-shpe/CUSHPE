@@ -1,0 +1,335 @@
+<!-- INDEX.HTML -- HOMEPAGE -->
+<!-- As a reminder, make sure to comment sections and minimize commented out sections to avoid clutter & mess. -->
+
+ <!-- This section is on every html file. It connects different files together and sets up the structure. Ensure the css files correspond to this html file. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SHPE Columbia University</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="Styling/index.css">
+  <link rel="stylesheet" href="Styling/navigation.css">
+  <link rel="stylesheet" href="Styling/footer.css">
+</head>
+<body>
+
+<!-- This section is for the NAVIGATION BAR. As of now (5/3/26), you will need to make changes to EVERY file to update something on the navigation bar. -->
+<nav>
+  <a href="index.html" class="nav-logo">
+     <img src="Logos/WhiteandColor.png" class="nav-logo-icon"/>
+  </a>
+
+  <!-- Hamburger (Shown when the screen shrinks) -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- If you want to add a new tab, edit this and make sure to create the new .html file for it to head to. -->
+  <ul class="nav-links" id="navLinks">
+    <li><a href="events.html">Events</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="programs.html">Programs</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="sponsorship.html">Sponsor</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+  </ul>
+</nav>
+
+<!-- This section is the HERO section. It is basically what you see the top of this html page. -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow"><span></span> 🦁 Columbia University · New York City</div>
+    <h1 class="hero-title">Society of Hispanic<br/><em>Professional Engineers</em></h1>
+    <p class="hero-sub">Empowering the next generation of Hispanic leaders in STEM through community, professional development, and engineering excellence on Morningside Heights.</p>
+    <div class="hero-btns">
+      <a href="contact.html" class="btn-primary">Contact Us</a>
+      <a href="sponsorship.html" class="btn-outline">Sponsor</a>
+      <a href="events.html" class="btn-outline">View Events</a>
+      <a href="https://shpe.org/membership/become-a-member/" class="btn-outline">Become a SHPE National member</a>
+    </div>
+  </div>
+</section>
+
+<!-- This section is the stats section, separating the Hero section and the About section -->
+<div class="stats-strip">
+  <div><div class="stat-num">100+</div><div class="stat-label">Active Members</div></div>
+  <div><div class="stat-num">40+</div><div class="stat-label">Annual Events</div></div>
+  <div><div class="stat-num">30+</div><div class="stat-label">Company Partners</div></div>
+  <div><div class="stat-num">2003</div><div class="stat-label">Chapter Established</div></div>
+</div>
+
+<!-- This section is the ABOUT section, separating the Hero section and the About section -->
+<section class="about">
+  <div class="about-inner">
+    <div>
+      <div class="section-eyebrow">Who We Are</div>
+      <h2 class="section-title">Empowering generations of <span> Engineers</span></h2>
+      <p class="section-body">SHPE at Columbia University is dedicated to empowering Hispanic students in STEM fields. We provide professional development, networking opportunities, and community service initiatives that help our members grow as engineers and leaders — in the heart of New York City.</p>
+      <div class="pillars">
+        <div class="pillar">
+          <div class="pillar-icon">🚀</div>
+          <h4>Professional Development</h4>
+          <p>Workshops, resume reviews, and career guidance</p>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon">🤝</div>
+          <h4>Networking</h4>
+          <p>Connect with industry leaders and alumni</p>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon">🌱</div>
+          <h4>Community Service</h4>
+          <p>STEM outreach in NYC communities</p>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon">📚</div>
+          <h4>Mentorship</h4>
+          <p>MentorSHPE program and access to a huge network</p>
+        </div>
+      </div>
+    </div>
+    <div class="about-visual">
+      <div class="columbia-crown">👑</div>
+      <div class="about-visual-badge">Columbia University</div>
+      <div class="about-visual-quote">"Engineering a brighter future — together, as a familia."</div>
+      <div class="about-visual-attr">— SHPE Columbia Chapter Vision</div>
+    </div>
+  </div>
+</section>
+
+<!-- THIS SECTION WAS COMMENTED OUT TO AVOID CLUTTER. BUT IF TECH CHAIR LIKES IT, FEEL FREE TO ADD. OR JUST DELETE OVERALL. MAKE SURE TO MODIFY CSS AS WELL.  -->
+<!-- ***PROGRAMS PREVIEW EXAMPLE U CAN USE......***
+<section class="programs">
+  <div class="programs-inner">
+    <div class="programs-header">
+      <div class="section-eyebrow">What We Offer</div>
+      <h2 class="section-title">Programs & <span>Initiatives</span></h2>
+    </div>
+    <div class="programs-grid">
+      <a href="programs.html" class="program-card">
+        <div class="card-tag">Conference</div>
+        <div class="card-icon">🏆</div>
+        <div class="card-title">National Convention</div>
+        <p class="card-body">Join thousands of Hispanic STEM leaders at the largest national gathering, with workshops, career fairs, and celebrations.</p>
+        <div class="card-arrow">Learn More →</div>
+      </a>
+      <a href="programs.html" class="program-card">
+        <div class="card-tag">Women in STEM</div>
+        <div class="card-icon">🎀</div>
+        <div class="card-title">SHPEtinas</div>
+        <p class="card-body">A dedicated space empowering Latina women in engineering through mentorship, workshops, and a supportive sisterhood.</p>
+        <div class="card-arrow">Learn More →</div>
+      </a>
+      <a href="programs.html" class="program-card">
+        <div class="card-tag">Outreach</div>
+        <div class="card-icon">🏙️</div>
+        <div class="card-title">Día de Ciencias</div>
+        <p class="card-body">Partnering with local high schools to inspire the next generation of Latino engineers through hands-on STEM workshops.</p>
+        <div class="card-arrow">Learn More →</div>
+      </a>
+      <a href="programs.html" class="program-card">
+        <div class="card-tag">Academic</div>
+        <div class="card-icon">📖</div>
+        <div class="card-title">MentorSHPE Program</div>
+        <p class="card-body">Pairing underclassmen with upperclassmen and alumni mentors for guidance on academics, research, and career paths.</p>
+        <div class="card-arrow">Learn More →</div>
+      </a>
+       <a href="programs.html" class="program-card">
+        <div class="card-tag">Networking</div>
+        <div class="card-icon">📄</div>
+        <div class="card-title">Café con Leche</div>
+        <p class="card-body">Welcoming NYC professionals from all industries to network with current students. Event is in collaboration with LPEN. </p>
+        <div class="card-arrow">Learn More →</div>
+      </a>
+      </a>
+       <a href="programs.html" class="program-card">
+        <div class="card-tag">Networking</div>
+        <div class="card-icon">📄</div>
+        <div class="card-title">SHPE Chapter Mixers</div>
+        <p class="card-body">Connecting SHPE chapters in NYC together to encourage community, resilience, and support. </p>
+        <div class="card-arrow">Learn More →</div>
+      </a>
+    </div>
+  </div>
+</section>
+-->
+
+<!-- ***EVENTS PREVIEW EXAMPLE U CAN USE......***
+<section class="events-preview">
+  <div class="events-inner">
+    <div class="events-header">
+      <div>
+        <div class="section-eyebrow">Upcoming</div>
+        <h2 class="section-title">Events & <span>Gatherings</span></h2>
+      </div>
+      <a href="events.html" class="btn-outline">All Events →</a>
+    </div>
+    <div class="events-grid">
+      <div class="event-card">
+        <div class="event-card-img">
+          🎉
+          <div class="event-date"><div class="month">Nov</div><div class="day">15</div></div>
+        </div>
+        <div class="event-card-body">
+          <div class="event-type">Flagship · Gala</div>
+          <div class="event-name">Annual SHPE Columbia Gala 2025</div>
+          <div class="event-meta">Low Library · Columbia University · 6:00 PM</div>
+        </div>
+      </div>
+      <div class="event-card small">
+        <div class="event-card-img">🌐
+          <div class="event-date"><div class="month">Oct</div><div class="day">28</div></div>
+        </div>
+        <div class="event-card-body">
+          <div class="event-type">Workshop</div>
+          <div class="event-name">Tech Industry Panel</div>
+          <div class="event-meta">Mudd Hall · 5 PM</div>
+        </div>
+      </div>
+      <div class="event-card small">
+        <div class="event-card-img">🤝
+          <div class="event-date"><div class="month">Sep</div><div class="day">20</div></div>
+        </div>
+        <div class="event-card-body">
+          <div class="event-type">Social</div>
+          <div class="event-name">Fall Welcome Social</div>
+          <div class="event-meta">Hartley Lounge · 7 PM</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+
+<!-- This section is the GALLERY section. To add more pictures, just duplicate the gallery card line and reference images in the CommunityImages folder.  -->
+<section class="gallery">
+  <div class="gallery-inner">
+    <div class="gallery-header">
+      <div class="section-eyebrow">Our Community</div>
+      <h2 class="section-title">SHPE in <span>Action</span></h2>
+    </div>
+
+    <div class="gallery-carousel">
+  
+        <button class="gallery-btn left" onclick="moveSlide(-1)">‹</button>
+
+        <div class="gallery-viewport">
+            <div class="gallery-track" id="galleryTrack">
+
+                <div class="gallery-card"><img src="CommunityImages/Image1.jpeg" /></div>
+                <div class="gallery-card"><img src="CommunityImages/Image2.JPG" /></div>
+                <div class="gallery-card"><img src="CommunityImages/Image3.JPG" /></div>
+                <div class="gallery-card"><img src="CommunityImages/Image4.JPG" /></div>
+                <div class="gallery-card"><img src="CommunityImages/Image5.png" /></div>
+                <div class="gallery-card"><img src="CommunityImages/Image6.png" /></div>
+                <div class="gallery-card"><img src="CommunityImages/Image7.png" /></div>
+                <div class="gallery-card"><img src="CommunityImages/Image8.png" /></div>
+                <div class="gallery-card"><img src="CommunityImages/Image9.png" /></div>
+
+            </div>
+        </div>
+
+    <button class="gallery-btn right" onclick="moveSlide(1)">›</button>
+
+    </div>
+  </div>
+</section>
+
+<!-- This section is the SPONSOR section. Make sure to differentiate our current sponsors from companies we've worked with. -->
+<section class="sponsors-section" id="past-sponsors">
+  <div class="sponsors-inner">
+    <div class="sponsors-header">
+      <div class="section-eyebrow">Companies We've Worked With</div>
+      <h2 class="section-title">Our <span>Partners</span></h2>
+      <p class="section-body" style="margin:0 auto;text-align:center;">We've been proud to collaborate with industry leaders across finance, tech, consulting, and engineering.</p>
+    </div>
+
+    <div class="sponsors-showcase">
+      <div class="sponsor-chip featured">
+        <span class="sponsor-star">★</span> Intuit
+      </div>
+      <div class="sponsor-chip featured">
+        <span class="sponsor-star">★</span> Societe Generale
+      </div>
+      <div class="sponsor-chip">Datadog</div>
+      <div class="sponsor-chip">Visa</div>
+      <div class="sponsor-chip">Freestone Grove</div>
+      <div class="sponsor-chip">Whiting Turner</div>
+      <div class="sponsor-chip">Block</div>
+      <div class="sponsor-chip">Capital One</div>
+      <div class="sponsor-chip">Bank of America</div>
+      <div class="sponsor-chip">Jane Street</div>
+      <div class="sponsor-chip">Google</div>
+    </div>
+
+    <div class="sponsors-note">
+      <div class="note-icon">★</div>
+      <p>Starred companies are current or recent financial sponsors of SHPE Columbia.</p>
+    </div>
+  </div>
+</section>
+
+<!-- This section is the CTA section. -->
+<div class="cta-banner">
+  <div class="section-eyebrow">Join the Familia</div>
+  <h2>¡Una Familia Unida!</h2>
+  <p>Ready to become part of Columbia's premier Hispanic engineering organization?</p>
+  <div class="hero-btns">
+    <a href="contact.html" class="btn-primary">Join SHPE Columbia</a>
+    <a href="team.html" class="btn-outline">Meet the Team</a>
+  </div>
+</div>
+
+<!-- This section is for the FOOTER. As of now (5/3/26), you will need to make changes to EVERY file with the footer to update something on the footer. -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="nav-logo">
+        <img src="Logos/WhiteandColor.png" class="nav-logo-icon"/>
+      </div>
+      <p>Empowering Hispanic students in STEM through professional development, networking, and community service — in the heart of New York City.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Navigate</h5>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="team.html">Team</a></li>
+         <li><a href="sponsorship.html">Sponsor</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Programs</h5>
+      <ul>
+        <li><a href="programs.html">SHPEtinas</a></li>
+        <li><a href="programs.html">Dia De Ciencias</a></li>
+        <li><a href="programs.html">National Convention</a></li>
+        <li><a href="programs.html">Cafe Con Leche</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Resources</h5>
+      <ul>
+        <li><a href="https://www.shpe.org" target="_blank">National SHPE</a></li>
+        <li><a href="https://engineering.columbia.edu" target="_blank">Columbia SEAS</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 SHPE Columbia University. All rights reserved.</p>
+    <p style="color:rgba(155,221,255,0.3);font-size:0.72rem;">New York City, NY</p>
+  </div>
+</footer>
+<!-- Always make sure to connect js files if they need it here. -->
+    <script src="Scripts/index.js"></script>
+    <script src="Scripts/navigation.js"></script>
+</body>
+</html>
