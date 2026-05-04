@@ -30,3 +30,32 @@
       display: flex; justify-content: space-between; align-items: center;
     }
     .footer-bottom p { font-size: 0.78rem; color: rgba(255,255,255,0.25); }
+
+
+@media (max-width: 900px) {
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    padding: 3rem 1.5rem 2rem;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+  .footer-brand p {
+    max-width: 100%;
+  }
+}
